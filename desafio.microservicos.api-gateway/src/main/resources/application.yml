@@ -1,0 +1,27 @@
+server:
+  port: 8701
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8700/eureka/
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: API-GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: produtos-service
+          uri: lb://PRODUTOS-SERVICE
+          predicates:
+            - Path=/produtos/**
+        - id: pedidos-service
+          uri: lb://PEDIDOS-SERVICE
+          predicates:
+            - Path=/pedidos/**
+logging:
+  level:
+    root: info

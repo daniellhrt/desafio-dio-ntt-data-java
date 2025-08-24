@@ -1,0 +1,28 @@
+# Exclui arquivos de IDEs (IntelliJ, VS Code, etc.)
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Exclui arquivos de build do Maven
+target/
+pom.xml.tag
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+build/
+*.class
+
+# Exclui logs
+*.log
+log/
+logs/
+
+# Exclui arquivos de sistema
+.classpath
+.project
+.settings/
+
+# Exclui dependências do Maven (opcional, pode ser útil para reduzir o tamanho do repo)
+# .m2/

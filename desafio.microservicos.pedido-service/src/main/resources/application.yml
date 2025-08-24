@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: PEDIDOS-SERVICE
+
+server:
+  port: 8200 # Primeira porta da faixa 8200-8299
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8700/eureka/
